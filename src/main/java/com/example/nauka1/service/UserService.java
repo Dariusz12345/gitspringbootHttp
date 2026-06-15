@@ -1,7 +1,7 @@
 package com.example.nauka1.service;
 
 import com.example.nauka1.repository.UserRepository;
-import model.User;
+import com.example.nauka1.model.User;
 import org.springframework.stereotype.Service;
 import org.springframework.web.bind.annotation.RequestBody;
 
@@ -28,7 +28,7 @@ public List<User> getUsers() {
     }
 
 
-    public void deleteUser(int id) {
+    public void deleteUser(Integer id) {
 
         User user = userRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("User not found"));

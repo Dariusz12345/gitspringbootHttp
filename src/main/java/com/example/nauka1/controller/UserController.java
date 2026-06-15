@@ -1,8 +1,10 @@
 package com.example.nauka1.controller;
 
 import com.example.nauka1.service.UserService;
-import model.User;
+import com.example.nauka1.model.User;
 import org.springframework.web.bind.annotation.*;
+
+import com.example.nauka1.model.User;
 
 import java.util.List;
 
@@ -29,12 +31,9 @@ public class UserController {
     }
 
 
-    @PostMapping("/users/delete/{id}")
-    public String deleteUser(@PathVariable int id) {
-
+    @DeleteMapping("/{id}")
+    public void deleteUser(@PathVariable Integer id) {
         userService.deleteUser(id);
-
-        return "redirect:/users";
     }
 
 }

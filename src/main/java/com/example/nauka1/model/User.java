@@ -1,6 +1,7 @@
-package model;
+package com.example.nauka1.model;
 
 import jakarta.persistence.*;
+import com.example.nauka1.model.User;
 import org.hibernate.query.sql.internal.ParameterRecognizerImpl;
 
 @Entity
@@ -10,8 +11,11 @@ public class User {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private int id;
+    private Integer id;
 
+
+
+    @Column(unique = true)
     private String username;
     private String password;
     private String email;
@@ -20,7 +24,7 @@ public class User {
 
     }
 
-    public User(int id, String username, String password, String email) {
+    public User(Integer id, String username, String password, String email) {
         this.id = id;
         this.username = username;
         this.password = password;

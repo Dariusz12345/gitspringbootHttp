@@ -1,6 +1,6 @@
 package com.example.nauka1.repository;
 
-import model.User;
+import com.example.nauka1.model.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;
